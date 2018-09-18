@@ -1,29 +1,33 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>TJX Service Center Updates</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="view.css" media="all">
 <script type="text/javascript" src="view.js"></script>
 <script type="text/javascript" src="calendar.js"></script>
 </head>
 <body id="main_body" >
-<form method="post" action="" name="carrierUpdate">
-	
+<div class="container">
 	<img id="top" src="top.png" alt="">
-	<div id="form_container">
 	<img src="Premier-logo-color-no-bkg.png" alt="logo">
 					<div class="form_description">
 					<span style="color:#fff">
 			<h1><strong>TJX Service Center Updates</strong></h1>
 			&nbsp; &nbsp;<p style="text-align:center">Please complete the below form with "load" updates. All amrked "*" fields are required.</span></p>
 		</div>						
-			<ul >
-<div class="form-group required">			
-					
-		<label class="description">Carrier SCAC <span style="color:red">*</span> </label>
-		<select class="element select medium" id="element_8" name="element_8" > 
-			<option value="" selected="selected" required></option>
+			<ul 
+<form>
+<div id="form_container">
+<div class="form-group row">
+<div class="col-4">			
+<label class="description" for="scac">Carrier SCAC <span style="color:red">*</span> </label>
+<select class="form-control" id="scac" type="text"> 
+<option value="" selected="selected"></option>
 <option value="1" selected="selected" >Select</option>
 <option value="2" >ANSR</option>
 <option value="3" >CDNK</option>
@@ -55,6 +59,8 @@
   <option  value="29">XPOG</option>
 
 		</select>
+		</div>
+		</div>
 		</li>	<section>
 			<h3><span style="color:#A6192E"><em>----Load Details----</em></span></h3>
 			<p></p>
@@ -106,14 +112,13 @@
 		<label class="description" for="element_10" required>Destination (Premier SC)<span style="color:red">*</span> </label>
 		<div>
 		<select class="element select medium" id="element_10" name="element_10"> 
-			<option value="" selected="selected"></option>
-<option value="1" >Select</option>
+			<option value="1" selected="selected"></option>
 <option value="" >Chicopee, MA</option>
 <option value="" >Lacey, WA</option>
-<option  value="LFL">Lakeland, FL</option>
-<option  value="MMI">Monroe, MI</option>
-<option  value="MAL">Montgomery, AL</option>
-<option  value="UPIL">University Park, IL</option>
+<option  value="">Lakeland, FL</option>
+<option  value="">Monroe, MI</option>
+<option  value="">Montgomery, AL</option>
+<option  value="">University Park, IL</option>
 		
 
 		</select>
@@ -125,15 +130,15 @@
 		</li>		
 		<label class="description" for="element_6" required>ETA Date <span style="color:red">*</span> </label>
 		<span>
-			<input id="element_6_1" name="element_6_1" class="element text" size="2" maxlength="2" value="" type="text" placeholder="MM"> 
+			<input id="element_6_1" name="element_6_1" class="element text" size="8" maxlength="2" value="" type="text" placeholder="MM"> 
 			
 		</span>
 		<span>
-			<input id="element_6_2" name="element_6_2" class="element text" size="2" maxlength="2" value="" type="text" placeholder="DD"> 
+			<input id="element_6_2" name="element_6_2" class="element text" size="8" maxlength="2" value="" type="text" placeholder="DD"> 
 			
 		</span>
 		<span>
-	 		<input id="element_6_3" name="element_6_3" class="element text" size="4" maxlength="4" value="" type="text" placeholder="YYYY">
+	 		<input id="element_6_3" name="element_6_3" class="element text" size="8" maxlength="4" value="" type="text" placeholder="YYYY">
 			
 		</span>
 	
@@ -154,10 +159,10 @@
 		</li><br /> <br />		
 		<label class="description" for="element_7" required>ETA Time<span style="color:red">*</span> </label>
 		<span>
-			<input id="element_7_1" name="element_7_1" class="element text " size="2" type="text" maxlength="2" value="" placeholder="HH"/> : 
+			<input id="element_7_1" name="element_7_1" class="element text " size="8" type="text" maxlength="2" value="" placeholder="HH"/> : 
 		</span>
 		<span>
-			<input id="element_7_2" name="element_7_2" class="element text " size="2" type="text" maxlength="2" value="" placeholder="MM"/> : 
+			<input id="element_7_2" name="element_7_2" class="element text " size="8" type="text" maxlength="2" value="" placeholder="MM"/> : 
 			
 		</span>
 		<span>
@@ -165,8 +170,8 @@
 			<label>SS</label>
 		</span>-->
 		<span>
-			<select class="element select" style="width:4em" id="element_7_4" name="element_7_4">
-			    <option value="select" selected="selected">AM/PM</option>
+			<select class="element select" style="width:6em" id="element_7_4" name="element_7_4">
+			    <option value="select" selected="selected">Select</option>
 				<option value="AM" >AM</option>
 				<option value="PM" >PM</option>
 			</select>
@@ -175,13 +180,7 @@
 		</li>
 			<br /><br />
 			
-				<button onclick="submit()">Submit</button>	
-				<script>
-				function submit(){
-				document.carrierUpdate.action="";
-				document.carrierUpdate.submit();
-				}
-				</script>
+				<input type="submit" value="Submit">
 		</form>	
 	<br /> <br />
 	<img id="bottom" src="bottom.png" alt="">
